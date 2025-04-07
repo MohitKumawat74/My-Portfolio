@@ -1,0 +1,295 @@
+/* Base Styles */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    z-index: 2;
+  }
+  
+  .social-icon {
+    position: relative;
+    color: white;
+    font-size: 1.75rem;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-5px);
+    color: #a54f3c;
+  }
+  
+  .social-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  .icon-tooltip {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .social-icon:hover .icon-tooltip {
+    opacity: 1;
+  }
+  
+  .hero-content {
+    margin-bottom: 2rem;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .typewriter-container {
+    min-height: 3rem;
+  }
+  
+  .typewriter-text {
+    font-size: 1.75rem;
+    color: white;
+    font-weight: 500;
+    display: inline-block;
+  }
+  
+  .typewriter-cursor {
+    animation: blink 1s infinite;
+    color: #a54f3c;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .resume-button {
+    position: relative;
+    padding: 15px 30px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .resume-button:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .button-effect-left,
+  .button-effect-right {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #a54f3c;
+    transform: skew(-15deg);
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+/* Add these animations for extra flair */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.resume-button {
+  animation: pulse 2s infinite;
+}
+  
+/* Add these animations for extra flair */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.resume-button {
+  animation: pulse 2s infinite;
+}
+  /* Media Queries */
+  @media (max-width: 767px) {
+    .hero-section {
+      padding: 0 5%;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .social-icons {
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .social-icon {
+      font-size: 1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
+    .hero-title {
+      font-size: 2.25rem;
+    }
+  
+    .typewriter-text {
+      font-size: 1.5rem;
+    }
+  
+    .resume-button {
+      width: 9rem;
+      height: 3rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hero-title {
+      font-size: 2.75rem;
+    }
+  
+    .typewriter-text {
+      font-size: 1.625rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-section {
+      padding: 0 10%;
+    }
+  
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  
+    .typewriter-text {
+      font-size: 2rem;
+    }
+  }
+  /* Media Queries for Resume Button */
+
+/* For tablets and small laptops (768px - 1024px) */
+@media only screen and (max-width: 1024px) {
+  .resume-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* For large phones and small tablets (481px - 767px) */
+@media only screen and (max-width: 767px) {
+  .resume-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    letter-spacing: 0.8px;
+  }
+
+  .hero-button-container {
+    margin-top: 1.5rem;
+  }
+}
+
+/* For small phones (320px - 480px) */
+@media only screen and (max-width: 480px) {
+  .resume-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border-radius: 40px;
+  }
+
+  .button-text {
+    font-weight: 500;
+  }
+
+  /* Reduce pulse animation on small devices */
+  .resume-button {
+    animation: pulse 3s infinite;
+  }
+}
+
+/* For very small phones (below 320px) */
+@media only screen and (max-width: 319px) {
+  .resume-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* For landscape orientation on mobile devices */
+@media only screen and (max-height: 480px) and (orientation: landscape) {
+  .resume-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .hero-button-container {
+    margin-top: 0.5rem;
+  }
+}
+
+/* For devices with touch screens (removes hover effects) */
+@media (hover: none) {
+  .resume-button:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: none;
+  }
+
+  .resume-button:hover .button-effect-left,
+  .resume-button:hover .button-effect-right {
+    width: 0;
+  }
+}
