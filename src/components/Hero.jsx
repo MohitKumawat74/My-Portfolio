@@ -3,6 +3,7 @@ import { FaFacebook, FaYoutube, FaInstagram, FaLinkedin, FaGithub } from 'react-
 import { useState, useEffect, useRef } from 'react';
 import heroBg from '../assets/mohithomesection.jpg';
 import '../componentscss/Hero.css';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const texts = [
