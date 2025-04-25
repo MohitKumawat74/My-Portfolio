@@ -157,14 +157,14 @@ const ServiceDetail = () => {
             transition={{ delay: 1.2 }}
           >
             <a 
-              href="https://wa.me/918890595701" 
+              to="https://wa.me/918890595701" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-[#48cae4] text-gray-900 font-medium rounded-lg hover:bg-[#00b4d8] transition-colors"
             >
               Contact Me About This Service
             </a>
-            <button className=' ms-1.5 inline-block px-6 py-3 bg-[#030404] text-white font-medium rounded-lg hover:bg-[#f5fcfd] hover:text-black transition-colors cursor-pointer'><a href="/services"> Back to Service </a></button>
+            <button className=' ms-1.5 inline-block px-6 py-3 bg-[#030404] text-white font-medium rounded-lg hover:bg-[#f5fcfd] hover:text-black transition-colors cursor-pointer'><a to="/services"> Back to Service </a></button>
 
           </motion.div>
         </motion.div>

@@ -69,7 +69,7 @@ const About = () => {
             </div>
 
             <motion.a
-              href={`https://wa.me/918890595701`}
+              to={`https://wa.me/918890595701`}
               target="_blank"
               rel="noopener noreferrer" 
               className={`inline-block px-5 py-2 sm:px-6 sm:py-3 font-medium rounded-lg transition-colors text-sm sm:text-base ${theme === 'dark' ? 'bg-[#48cae4] text-gray-900 hover:bg-[#00b4d8]' : 'bg-[#a54f3c] text-white hover:bg-[#8a3c2c]'}`}

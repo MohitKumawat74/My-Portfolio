@@ -47,7 +47,7 @@ const Hero = () => {
   const handleDownloadResume = () => {
     // Create a temporary link element
     const link = document.createElement('a');
-    link.href = '/path/to/Mohit.pdf'; // Update this path to your actual PDF file location
+    link.to = '/path/to/Mohit.pdf'; // Update this path to your actual PDF file location
     link.download = 'Mohit_Kumawat_Resume.pdf'; // The filename for the downloaded file
     document.body.appendChild(link);
     link.click();
@@ -66,23 +66,23 @@ const Hero = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2 }}
       >
-        <a href="https://www.facebook.com/me/" className="social-icon" target="_blank" rel="noopener noreferrer">
+        <a to="https://www.facebook.com/me/" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaFacebook />
           <span className="icon-tooltip">Facebook</span>
         </a>
-        <a href="http://www.youtube.com/@Mohit74k" className="social-icon" target="_blank" rel="noopener noreferrer">
+        <a to="http://www.youtube.com/@Mohit74k" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaYoutube />
           <span className="icon-tooltip">YouTube</span>
         </a>
-        <a href="https://www.instagram.com/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
+        <a to="https://www.instagram.com/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
           <span className="icon-tooltip">Instagram</span>
         </a>
-        <a href="https://www.linkedin.com/in/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
+        <a to="https://www.linkedin.com/in/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
           <span className="icon-tooltip">LinkedIn</span>
         </a>
-        <a href="https://github.com/MohitKumawat74" className="social-icon" target="_blank" rel="noopener noreferrer">
+        <a to="https://github.com/MohitKumawat74" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaGithub />
           <span className="icon-tooltip">GitHub</span>
         </a>

@@ -18,7 +18,7 @@ function BlogPost() {
       <div id='blog-post-container'>
         <h2 id='blog-post-title'>Post Not Found</h2>
         <p>The requested blog post could not be found.</p>
-        <a href="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</a>
+        <a to="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</a>
       </div>
     );
   }
@@ -31,7 +31,7 @@ function BlogPost() {
         id='blog-post-content'
         dangerouslySetInnerHTML={{ __html: post.fullContent }}
       />
-      <a href="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</a>
+      <a to="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</a>
     </div>
   );
 }

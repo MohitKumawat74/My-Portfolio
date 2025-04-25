@@ -117,7 +117,7 @@ const Services = () => {
                   <h3 className={`text-2xl font-bold mb-3  $data-aos="fade-up" data-aos-delay="100" ${theme === 'dark' ? 'text-[#48cae4]' : 'text-[#a54f3c]'}`}>{service.title}</h3>
                   <p className="mb-4" data-aos="zoom-in-up" data-aos-delay="200">{service.description}</p>
                   <a 
-                    href={`/services/${service.id}`} 
+                    to={`/services/${service.id}`} 
                     className= { `mt-auto px-4 py-2 rounded-lg transition-colors ${theme === 'dark' ? 'bg-[#48cae4] text-gray-900 hover:bg-[#00b4d8]' : 'bg-[#a54f3c] text-white hover:bg-[#8a3c2c]'}`}
                   >
                     Learn More

@@ -74,7 +74,7 @@ const Contact = () => {
           {contactDetails.map((detail, index) => (
             <motion.a
               key={index}
-              href={detail.link}
+              to={detail.link}
               target="_blank"
               rel="noopener noreferrer"
               className={`rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-50'}`}
@@ -108,7 +108,7 @@ const Contact = () => {
             Have a project in mind?
           </h3>
           <a
-            href="https://wa.me/918890595701"
+            to="https://wa.me/918890595701"
             className={`inline-block font-medium py-3 px-8 rounded-lg transition-colors duration-300 ${theme === 'dark' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-[#a54f3c] hover:bg-[#8a3c2c] text-white'}`}
           >
             Let's Discuss

@@ -4,10 +4,11 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
 import logo from '../assets/mohitlogo.png';
 import '../componentscss/Navbar.css';
+import { Link } from 'react-router-dom';
 
-const NavLink = React.memo(({ href, children, onClick, isActive }) => (
-  <a
-    href={href}
+const NavLink = React.memo(({ to, children, onClick, isActive }) => (
+  <Link
+    to={to}
     onClick={onClick}
     className={`px-4 py-2 rounded-lg border-2 transition-all duration-300 font-sans ${
       isActive 
@@ -17,7 +18,7 @@ const NavLink = React.memo(({ href, children, onClick, isActive }) => (
     aria-current={isActive ? "page" : undefined}
   >
     {children}
-  </a>
+  </Link>
 ));
 
 const Navbar = () => {
@@ -90,9 +91,9 @@ const Navbar = () => {
           </motion.button>
           
           <div className="hidden md:flex space-x-4">
-            <NavLink href="/" isActive={activeSection === 'home'}>Home</NavLink>
-            <NavLink href="/about" isActive={activeSection === 'about'}>About</NavLink>
-            <NavLink href="/skills" isActive={activeSection === 'skills'}>Skills</NavLink>
+            <NavLink to="/" isActive={activeSection === 'home'}>Home</NavLink>
+            <NavLink to="/about" isActive={activeSection === 'about'}>About</NavLink>
+            <NavLink to="/skills" isActive={activeSection === 'skills'}>Skills</NavLink>
           </div>
         </div>
 
@@ -126,9 +127,9 @@ const Navbar = () => {
         {/* Right Nav Items */}
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex space-x-4">
-            <NavLink href="/services" isActive={activeSection === 'services'}>Services</NavLink>
-            <NavLink href="/blog" isActive={activeSection === 'blog'}>Blog</NavLink>
-            <NavLink href="/contact" isActive={activeSection === 'contact'}>Contact</NavLink>
+            <NavLink to="/services" isActive={activeSection === 'services'}>Services</NavLink>
+            <NavLink to="/blog" isActive={activeSection === 'blog'}>Blog</NavLink>
+            <NavLink to="/contact" isActive={activeSection === 'contact'}>Contact</NavLink>
           </div>
           
           <button
@@ -162,12 +163,12 @@ const Navbar = () => {
           >
             <div className="pt-20 px-4 h-full">
               <div className="flex flex-col space-y-4">
-                <NavLink href="/" onClick={closeMenu} isActive={activeSection === 'home'}>Home</NavLink>
-                <NavLink href="/about" onClick={closeMenu} isActive={activeSection === 'about'}>About</NavLink>
-                <NavLink href="/skills" onClick={closeMenu} isActive={activeSection === 'skills'}>Skills</NavLink>
-                <NavLink href="/services" onClick={closeMenu} isActive={activeSection === 'services'}>Services</NavLink>
-                <NavLink href="/blog" onClick={closeMenu} isActive={activeSection === 'blog'}>Blog</NavLink>
-                <NavLink href="/contact" onClick={closeMenu} isActive={activeSection === 'contact'}>Contact</NavLink>
+                <NavLink to="/" onClick={closeMenu} isActive={activeSection === 'home'}>Home</NavLink>
+                <NavLink to="/about" onClick={closeMenu} isActive={activeSection === 'about'}>About</NavLink>
+                <NavLink to="/skills" onClick={closeMenu} isActive={activeSection === 'skills'}>Skills</NavLink>
+                <NavLink to="/services" onClick={closeMenu} isActive={activeSection === 'services'}>Services</NavLink>
+                <NavLink to="/blog" onClick={closeMenu} isActive={activeSection === 'blog'}>Blog</NavLink>
+                <NavLink to="/contact" onClick={closeMenu} isActive={activeSection === 'contact'}>Contact</NavLink>
               </div>
             </div>
           </motion.div>
