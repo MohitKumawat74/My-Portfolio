@@ -66,26 +66,26 @@ const Hero = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2 }}
       >
-        <a to="https://www.facebook.com/me/" className="social-icon" target="_blank" rel="noopener noreferrer">
+        <Link to="https://www.facebook.com/me/" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaFacebook />
           <span className="icon-tooltip">Facebook</span>
-        </a>
-        <a to="http://www.youtube.com/@Mohit74k" className="social-icon" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link to="http://www.youtube.com/@Mohit74k" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaYoutube />
           <span className="icon-tooltip">YouTube</span>
-        </a>
-        <a to="https://www.instagram.com/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link to="https://www.instagram.com/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
           <span className="icon-tooltip">Instagram</span>
-        </a>
-        <a to="https://www.linkedin.com/in/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link to="https://www.linkedin.com/in/mohitkumawat74/" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
           <span className="icon-tooltip">LinkedIn</span>
-        </a>
-        <a to="https://github.com/MohitKumawat74" className="social-icon" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link to="https://github.com/MohitKumawat74" className="social-icon" target="_blank" rel="noopener noreferrer">
           <FaGithub />
           <span className="icon-tooltip">GitHub</span>
-        </a>
+        </Link>
       </motion.div>
 
       <motion.div 

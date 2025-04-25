@@ -156,7 +156,7 @@ const ServiceDetail = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            <a 
+            <Link 
               to="https://wa.me/918890595701" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -164,7 +164,7 @@ const ServiceDetail = () => {
             >
               Contact Me About This Service
             </a>
-            <button className=' ms-1.5 inline-block px-6 py-3 bg-[#030404] text-white font-medium rounded-lg hover:bg-[#f5fcfd] hover:text-black transition-colors cursor-pointer'><a to="/services"> Back to Service </a></button>
+            <button className=' ms-1.5 inline-block px-6 py-3 bg-[#030404] text-white font-medium rounded-lg hover:bg-[#f5fcfd] hover:text-black transition-colors cursor-pointer'><Link to="/services"> Back to Service </a></button>
 
           </motion.div>
         </motion.div>

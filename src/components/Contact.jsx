@@ -107,7 +107,7 @@ const Contact = () => {
           <h3 className={`text-xl font-medium mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             Have a project in mind?
           </h3>
-          <a
+          <Link
             to="https://wa.me/918890595701"
             className={`inline-block font-medium py-3 px-8 rounded-lg transition-colors duration-300 ${theme === 'dark' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-[#a54f3c] hover:bg-[#8a3c2c] text-white'}`}
           >

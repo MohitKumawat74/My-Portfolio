@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, Link } from 'react-router-dom';
 import '../componentscss/Blog.css';
 
 
@@ -18,7 +18,7 @@ function BlogPost() {
       <div id='blog-post-container'>
         <h2 id='blog-post-title'>Post Not Found</h2>
         <p>The requested blog post could not be found.</p>
-        <a to="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</a>
+        <Link to="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</Link>
       </div>
     );
   }
@@ -31,7 +31,7 @@ function BlogPost() {
         id='blog-post-content'
         dangerouslySetInnerHTML={{ __html: post.fullContent }}
       />
-      <a to="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</a>
+      <Link to="/blog" id='blog-back-link' aria-label="Go back to the blog">← Back to Blog</Link>
     </div>
   );
 }
