@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
-
+import { Link } from 'react-router-dom';
 const Contact = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -112,7 +112,7 @@ const Contact = () => {
             className={`inline-block font-medium py-3 px-8 rounded-lg transition-colors duration-300 ${theme === 'dark' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-[#a54f3c] hover:bg-[#8a3c2c] text-white'}`}
           >
             Let's Discuss
-          </a>
+          </Link>
         </motion.div>
       </div>
     </motion.section>

@@ -121,7 +121,7 @@ const Services = () => {
                     className= { `mt-auto px-4 py-2 rounded-lg transition-colors ${theme === 'dark' ? 'bg-[#48cae4] text-gray-900 hover:bg-[#00b4d8]' : 'bg-[#a54f3c] text-white hover:bg-[#8a3c2c]'}`}
                   >
                     Learn More
-                  </a>
+                  </Link>
 
                 </motion.div>
               </SwiperSlide>

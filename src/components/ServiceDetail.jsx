@@ -163,8 +163,8 @@ const ServiceDetail = () => {
               className="inline-block px-6 py-3 bg-[#48cae4] text-gray-900 font-medium rounded-lg hover:bg-[#00b4d8] transition-colors"
             >
               Contact Me About This Service
-            </a>
-            <button className=' ms-1.5 inline-block px-6 py-3 bg-[#030404] text-white font-medium rounded-lg hover:bg-[#f5fcfd] hover:text-black transition-colors cursor-pointer'><Link to="/services"> Back to Service </a></button>
+            </Link>
+            <button className=' ms-1.5 inline-block px-6 py-3 bg-[#030404] text-white font-medium rounded-lg hover:bg-[#f5fcfd] hover:text-black transition-colors cursor-pointer'><Link to="/services"> Back to Service </Link></button>
 
           </motion.div>
         </motion.div>
