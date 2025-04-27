@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+
 
 const serviceDetails = {
   webDevelopment: {
@@ -91,7 +92,7 @@ const ServiceDetail = () => {
   }
 
   return (
-    <section id="service-detail" className="w-full py-20 bg-gray-800 text-white">
+    <section id="service-detail" className="w-full  py-20 bg-gray-800 text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}

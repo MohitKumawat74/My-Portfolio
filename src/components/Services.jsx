@@ -62,10 +62,10 @@ const Services = () => {
   
 
   return (
-    <section id="services" className={`w-full py-10 h-144 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}>
+    <section id="services" className={`w-full py-10  ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800'}`}>
       <div className="container mx-auto px-4">
         <motion.h1 
-          className={`text-5xl  font-bold mb-4 text-center  ${theme === 'dark' ? 'text-[#48cae4]' : 'text-[#a54f3c]'} `}
+          className={`text-5xl pt-11 font-bold mb-4 text-center  ${theme === 'dark' ? 'text-[#48cae4]' : 'text-[#a54f3c]'} `}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 2 }}
@@ -105,10 +105,10 @@ const Services = () => {
             }}
             navigation
             pagination={{ clickable: true }}
-            className="pb-12"
+            className="pb-12 "
           >
             {services.map((service) => (
-              <SwiperSlide key={service.id}>
+              <SwiperSlide key={service.id} >
                 <motion.div 
                   className={`p-6 mb-14 rounded-xl h-full flex flex-col items-center text-center ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}
                   whileHover={{ y: -10 }}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import { Link } from 'react-router-dom';
+
 const Contact = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -72,18 +73,19 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {contactDetails.map((detail, index) => (
-            <motion.a
+            <motion.div
               key={index}
-              to={detail.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-50'}`}
+              className={`rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg cursor-pointer ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-50'}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.03 }}
             >
-              <div className="flex flex-col items-center text-center">
+              <Link
+                to="#"
+                onClick={() => window.open(detail.link, "_blank", "noopener noreferrer")}
+                className="flex flex-col items-center text-center"
+              >
                 <span className="text-4xl mb-4" aria-hidden="true">
                   {detail.icon}
                 </span>
@@ -93,8 +95,8 @@ const Contact = () => {
                 <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>
                   {detail.value}
                 </p>
-              </div>
-            </motion.a>
+              </Link>
+            </motion.div>
           ))}
         </div>
 
@@ -108,7 +110,8 @@ const Contact = () => {
             Have a project in mind?
           </h3>
           <Link
-            to="https://wa.me/918890595701"
+            to="#"
+            onClick={() => window.open("https://wa.me/918890595701", "_blank", "noopener noreferrer")}
             className={`inline-block font-medium py-3 px-8 rounded-lg transition-colors duration-300 ${theme === 'dark' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-[#a54f3c] hover:bg-[#8a3c2c] text-white'}`}
           >
             Let's Discuss

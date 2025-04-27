@@ -94,7 +94,7 @@ function Skills() {
  
   return (
     <motion.div 
-      className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-10 ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}
+      className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-18 md:py-10 ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
