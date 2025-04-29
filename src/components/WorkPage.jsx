@@ -20,7 +20,7 @@ const projects = [
     image: weatherImage,
     title: "Weather App",
     description: "A real-time, responsive weather forecasting application.",
-    link: "/projects/weather-app",
+    link: "https://weather-app-nine-rose-60.vercel.app/",
   },
   {
     image: studentPortalImage,
